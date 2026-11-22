@@ -1,0 +1,8 @@
+{
+  "n_inputs_replayed": 335,
+  "max_replay_difference_mm": 0.0,
+  "max_analytic_truth_error_mm": 8.881784197001252e-16,
+  "labels_and_warnings_verified": true,
+  "production_code_hash_verified": true,
+  "input_hashes_verified": true
+}

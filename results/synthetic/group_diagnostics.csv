@@ -1,0 +1,8 @@
+﻿group,n,n_success,n_failure,n_warning,bias_mm,mae_mm,rmse_mm,max_ae_mm,max_visible_ae_mm,within_0p2mm_count,working_target_note
+clean,54,54,0,0,8.840286054613002e-11,8.852333002414467e-11,3.745720675674134e-10,1.5891723154737194e-09,1.5891723154737194e-09,54,Proposed project target only; not engineering acceptance or overall accuracy
+noise,180,180,0,0,0.14756086924162287,0.14756174364515298,0.23769377462978386,0.6328776048940874,3.040434570777961e-11,122,Proposed project target only; not engineering acceptance or overall accuracy
+sampling,60,60,0,30,-0.02798911100707957,0.08048465792930332,0.11545938152273973,0.3465636626996875,1.0196288258157438e-12,52,Proposed project target only; not engineering acceptance or overall accuracy
+occlusion,3,3,0,0,-0.45244303334908503,0.47317782627262966,0.7334882324286452,1.2639422863663134,2.886579864025407e-15,2,Proposed project target only; not engineering acceptance or overall accuracy
+clutter,30,30,0,0,4.4966250774165495,4.4966250774165495,4.9993699604810455,6.993075986783038,6.993075986783044,0,Proposed project target only; not engineering acceptance or overall accuracy
+slab_clipping,3,3,0,0,-2.2718236227787725,2.271823622778773,2.840111534711991,4.105366787477985,4.105366787477987,1,Proposed project target only; not engineering acceptance or overall accuracy
+roi_change,5,5,0,0,0.05656994013008245,0.05656994013008245,0.07002947123186624,0.13881673550209306,5.5573323720636836e-12,5,Proposed project target only; not engineering acceptance or overall accuracy

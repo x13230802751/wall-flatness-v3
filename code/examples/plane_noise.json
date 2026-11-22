@@ -1,0 +1,28 @@
+{
+  "unit": "m",
+  "room_id": "synthetic",
+  "roi_id": "plane_noise",
+  "corners": [
+    [
+      -0.9,
+      -0.9,
+      0
+    ],
+    [
+      0.9,
+      -0.9,
+      0
+    ],
+    [
+      0.9,
+      0.9,
+      0
+    ],
+    [
+      -0.9,
+      0.9,
+      0
+    ]
+  ],
+  "description": "Synthetic controlled example; not real measurements"
+}

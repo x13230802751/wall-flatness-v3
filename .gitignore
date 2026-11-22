@@ -1,0 +1,35 @@
+# Only the project source, selected reports, and compact results are versioned.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/code/
+!/docs/
+!/results/
+
+# Generated point clouds, raw point coordinates, and local runtime artifacts.
+/code/outputs/
+/code/examples/*.csv
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.log
+~$*
+
+# Whitelist reports without restricted real point-cloud images.
+/docs/*
+!/docs/Task1_墙面平整度计算入门说明.docx
+!/docs/Task1_RMS准确性评测设计与实验记录.docx
+!/docs/Task1_RMS误差评估执行结果.docx
+!/docs/_work/
+/docs/_work/*
+!/docs/_work/*.py
+!/docs/_work/rms_benchmark_design.md

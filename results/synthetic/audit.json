@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-22",
+  "operation": "Audit and score existing runs; no remeasurement or parameter tuning",
+  "hashed_evidence_files": 729,
+  "synthetic_rows": 335,
+  "condition_rows": 44,
+  "official_rows": 4,
+  "zero_reference_rows": 9,
+  "undefined_relative_errors_correct": true,
+  "clean_numeric_gate_passed": true,
+  "production_unchanged": true,
+  "summary_crosschecks_passed": true,
+  "formal_real_wall_validation_complete": false,
+  "missing_real_reference": [
+    "Exact manual ROI or full-wall scope",
+    "Manual sampling and point weights",
+    "Reference-plane and RMS method",
+    "Reference measurement uncertainty",
+    "M04 official location image provenance"
+  ]
+}

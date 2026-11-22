@@ -1,0 +1,3245 @@
+{
+  "date": "2026-11-22",
+  "target": "Point-weighted RMS to the best-fit orthogonal plane on a fixed finite point set",
+  "truth": "Constructed zero-mean height field orthogonal to u and v, normalized to exact RMS A; height variance is smallest covariance eigenvalue",
+  "exact_input_units": "m except pose 2 clean cases use mm for both cloud and corners",
+  "numeric_gate_mm": 1e-06,
+  "proposed_practical_gate_mm": 0.2,
+  "gate_note": "0.2 mm is a project working target, not course requirement or engineering standard; not a clean-numerics threshold",
+  "noise_model": "Independent Gaussian displacement along nominal wall normal only; no scanner or registration realism claimed",
+  "repeat_definition": "Monte Carlo inputs with different seeds; not independent physical walls",
+  "failure_policy": "Keep all cases, exceptions and warning states; no parameter optimization",
+  "scenarios": [
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702300
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702301
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702302
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702303
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702304
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702305
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702306
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702307
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702308
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702309
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702310
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702311
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 3,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702312
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 3,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702313
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 3,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702314
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702315
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702316
+    },
+    {
+      "group": "clean",
+      "profile": "wave",
+      "A": 5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702317
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702318
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702319
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702320
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0.5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702321
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702322
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 0.5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702323
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702324
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702325
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702326
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1.8,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702327
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702328
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 1.8,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702329
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 3,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702330
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 3,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702331
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 3,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702332
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702333
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702334
+    },
+    {
+      "group": "clean",
+      "profile": "bowl",
+      "A": 5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702335
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702336
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702337
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702338
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0.5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702339
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702340
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 0.5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702341
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702342
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702343
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702344
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702345
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702346
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702347
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 3,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702348
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 3,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702349
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 3,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702350
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 5,
+      "pose": 0,
+      "unit": "m",
+      "seed": 702351
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702352
+    },
+    {
+      "group": "clean",
+      "profile": "bump",
+      "A": 5,
+      "pose": 2,
+      "unit": "mm",
+      "seed": 702353
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702354,
+      "sigma": 0.2,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702355,
+      "sigma": 0.2,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702356,
+      "sigma": 0.2,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702357,
+      "sigma": 0.2,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702358,
+      "sigma": 0.2,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702359,
+      "sigma": 0.2,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702360,
+      "sigma": 0.2,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702361,
+      "sigma": 0.2,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702362,
+      "sigma": 0.2,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702363,
+      "sigma": 0.2,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702364,
+      "sigma": 0.2,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702365,
+      "sigma": 0.2,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702366,
+      "sigma": 0.2,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702367,
+      "sigma": 0.2,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702368,
+      "sigma": 0.2,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702369,
+      "sigma": 0.2,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702370,
+      "sigma": 0.2,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702371,
+      "sigma": 0.2,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702372,
+      "sigma": 0.2,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702373,
+      "sigma": 0.2,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702374,
+      "sigma": 0.5,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702375,
+      "sigma": 0.5,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702376,
+      "sigma": 0.5,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702377,
+      "sigma": 0.5,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702378,
+      "sigma": 0.5,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702379,
+      "sigma": 0.5,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702380,
+      "sigma": 0.5,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702381,
+      "sigma": 0.5,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702382,
+      "sigma": 0.5,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702383,
+      "sigma": 0.5,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702384,
+      "sigma": 0.5,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702385,
+      "sigma": 0.5,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702386,
+      "sigma": 0.5,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702387,
+      "sigma": 0.5,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702388,
+      "sigma": 0.5,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702389,
+      "sigma": 0.5,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702390,
+      "sigma": 0.5,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702391,
+      "sigma": 0.5,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702392,
+      "sigma": 0.5,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702393,
+      "sigma": 0.5,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702394,
+      "sigma": 1.0,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702395,
+      "sigma": 1.0,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702396,
+      "sigma": 1.0,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702397,
+      "sigma": 1.0,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702398,
+      "sigma": 1.0,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702399,
+      "sigma": 1.0,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702400,
+      "sigma": 1.0,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702401,
+      "sigma": 1.0,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702402,
+      "sigma": 1.0,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702403,
+      "sigma": 1.0,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702404,
+      "sigma": 1.0,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702405,
+      "sigma": 1.0,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702406,
+      "sigma": 1.0,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702407,
+      "sigma": 1.0,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702408,
+      "sigma": 1.0,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702409,
+      "sigma": 1.0,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702410,
+      "sigma": 1.0,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702411,
+      "sigma": 1.0,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702412,
+      "sigma": 1.0,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 0.5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702413,
+      "sigma": 1.0,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702414,
+      "sigma": 0.2,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702415,
+      "sigma": 0.2,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702416,
+      "sigma": 0.2,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702417,
+      "sigma": 0.2,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702418,
+      "sigma": 0.2,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702419,
+      "sigma": 0.2,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702420,
+      "sigma": 0.2,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702421,
+      "sigma": 0.2,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702422,
+      "sigma": 0.2,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702423,
+      "sigma": 0.2,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702424,
+      "sigma": 0.2,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702425,
+      "sigma": 0.2,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702426,
+      "sigma": 0.2,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702427,
+      "sigma": 0.2,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702428,
+      "sigma": 0.2,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702429,
+      "sigma": 0.2,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702430,
+      "sigma": 0.2,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702431,
+      "sigma": 0.2,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702432,
+      "sigma": 0.2,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702433,
+      "sigma": 0.2,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702434,
+      "sigma": 0.5,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702435,
+      "sigma": 0.5,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702436,
+      "sigma": 0.5,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702437,
+      "sigma": 0.5,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702438,
+      "sigma": 0.5,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702439,
+      "sigma": 0.5,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702440,
+      "sigma": 0.5,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702441,
+      "sigma": 0.5,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702442,
+      "sigma": 0.5,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702443,
+      "sigma": 0.5,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702444,
+      "sigma": 0.5,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702445,
+      "sigma": 0.5,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702446,
+      "sigma": 0.5,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702447,
+      "sigma": 0.5,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702448,
+      "sigma": 0.5,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702449,
+      "sigma": 0.5,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702450,
+      "sigma": 0.5,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702451,
+      "sigma": 0.5,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702452,
+      "sigma": 0.5,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702453,
+      "sigma": 0.5,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702454,
+      "sigma": 1.0,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702455,
+      "sigma": 1.0,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702456,
+      "sigma": 1.0,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702457,
+      "sigma": 1.0,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702458,
+      "sigma": 1.0,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702459,
+      "sigma": 1.0,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702460,
+      "sigma": 1.0,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702461,
+      "sigma": 1.0,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702462,
+      "sigma": 1.0,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702463,
+      "sigma": 1.0,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702464,
+      "sigma": 1.0,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702465,
+      "sigma": 1.0,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702466,
+      "sigma": 1.0,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702467,
+      "sigma": 1.0,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702468,
+      "sigma": 1.0,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702469,
+      "sigma": 1.0,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702470,
+      "sigma": 1.0,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702471,
+      "sigma": 1.0,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702472,
+      "sigma": 1.0,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702473,
+      "sigma": 1.0,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702474,
+      "sigma": 0.2,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702475,
+      "sigma": 0.2,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702476,
+      "sigma": 0.2,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702477,
+      "sigma": 0.2,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702478,
+      "sigma": 0.2,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702479,
+      "sigma": 0.2,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702480,
+      "sigma": 0.2,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702481,
+      "sigma": 0.2,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702482,
+      "sigma": 0.2,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702483,
+      "sigma": 0.2,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702484,
+      "sigma": 0.2,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702485,
+      "sigma": 0.2,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702486,
+      "sigma": 0.2,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702487,
+      "sigma": 0.2,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702488,
+      "sigma": 0.2,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702489,
+      "sigma": 0.2,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702490,
+      "sigma": 0.2,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702491,
+      "sigma": 0.2,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702492,
+      "sigma": 0.2,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702493,
+      "sigma": 0.2,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702494,
+      "sigma": 0.5,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702495,
+      "sigma": 0.5,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702496,
+      "sigma": 0.5,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702497,
+      "sigma": 0.5,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702498,
+      "sigma": 0.5,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702499,
+      "sigma": 0.5,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702500,
+      "sigma": 0.5,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702501,
+      "sigma": 0.5,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702502,
+      "sigma": 0.5,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702503,
+      "sigma": 0.5,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702504,
+      "sigma": 0.5,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702505,
+      "sigma": 0.5,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702506,
+      "sigma": 0.5,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702507,
+      "sigma": 0.5,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702508,
+      "sigma": 0.5,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702509,
+      "sigma": 0.5,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702510,
+      "sigma": 0.5,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702511,
+      "sigma": 0.5,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702512,
+      "sigma": 0.5,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702513,
+      "sigma": 0.5,
+      "rep": 19
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702514,
+      "sigma": 1.0,
+      "rep": 0
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702515,
+      "sigma": 1.0,
+      "rep": 1
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702516,
+      "sigma": 1.0,
+      "rep": 2
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702517,
+      "sigma": 1.0,
+      "rep": 3
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702518,
+      "sigma": 1.0,
+      "rep": 4
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702519,
+      "sigma": 1.0,
+      "rep": 5
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702520,
+      "sigma": 1.0,
+      "rep": 6
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702521,
+      "sigma": 1.0,
+      "rep": 7
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702522,
+      "sigma": 1.0,
+      "rep": 8
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702523,
+      "sigma": 1.0,
+      "rep": 9
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702524,
+      "sigma": 1.0,
+      "rep": 10
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702525,
+      "sigma": 1.0,
+      "rep": 11
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702526,
+      "sigma": 1.0,
+      "rep": 12
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702527,
+      "sigma": 1.0,
+      "rep": 13
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702528,
+      "sigma": 1.0,
+      "rep": 14
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702529,
+      "sigma": 1.0,
+      "rep": 15
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702530,
+      "sigma": 1.0,
+      "rep": 16
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702531,
+      "sigma": 1.0,
+      "rep": 17
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702532,
+      "sigma": 1.0,
+      "rep": 18
+    },
+    {
+      "group": "noise",
+      "profile": "wave",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702533,
+      "sigma": 1.0,
+      "rep": 19
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702534,
+      "fraction": 0.5,
+      "rep": 0
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702535,
+      "fraction": 0.5,
+      "rep": 1
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702536,
+      "fraction": 0.5,
+      "rep": 2
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702537,
+      "fraction": 0.5,
+      "rep": 3
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702538,
+      "fraction": 0.5,
+      "rep": 4
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702539,
+      "fraction": 0.5,
+      "rep": 5
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702540,
+      "fraction": 0.5,
+      "rep": 6
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702541,
+      "fraction": 0.5,
+      "rep": 7
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702542,
+      "fraction": 0.5,
+      "rep": 8
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702543,
+      "fraction": 0.5,
+      "rep": 9
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702544,
+      "fraction": 0.5,
+      "rep": 10
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702545,
+      "fraction": 0.5,
+      "rep": 11
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702546,
+      "fraction": 0.5,
+      "rep": 12
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702547,
+      "fraction": 0.5,
+      "rep": 13
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702548,
+      "fraction": 0.5,
+      "rep": 14
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702549,
+      "fraction": 0.5,
+      "rep": 15
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702550,
+      "fraction": 0.5,
+      "rep": 16
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702551,
+      "fraction": 0.5,
+      "rep": 17
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702552,
+      "fraction": 0.5,
+      "rep": 18
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702553,
+      "fraction": 0.5,
+      "rep": 19
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702554,
+      "fraction": 0.1,
+      "rep": 0
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702555,
+      "fraction": 0.1,
+      "rep": 1
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702556,
+      "fraction": 0.1,
+      "rep": 2
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702557,
+      "fraction": 0.1,
+      "rep": 3
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702558,
+      "fraction": 0.1,
+      "rep": 4
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702559,
+      "fraction": 0.1,
+      "rep": 5
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702560,
+      "fraction": 0.1,
+      "rep": 6
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702561,
+      "fraction": 0.1,
+      "rep": 7
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702562,
+      "fraction": 0.1,
+      "rep": 8
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702563,
+      "fraction": 0.1,
+      "rep": 9
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702564,
+      "fraction": 0.1,
+      "rep": 10
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702565,
+      "fraction": 0.1,
+      "rep": 11
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702566,
+      "fraction": 0.1,
+      "rep": 12
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702567,
+      "fraction": 0.1,
+      "rep": 13
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702568,
+      "fraction": 0.1,
+      "rep": 14
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702569,
+      "fraction": 0.1,
+      "rep": 15
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702570,
+      "fraction": 0.1,
+      "rep": 16
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702571,
+      "fraction": 0.1,
+      "rep": 17
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702572,
+      "fraction": 0.1,
+      "rep": 18
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702573,
+      "fraction": 0.1,
+      "rep": 19
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702574,
+      "fraction": 0.02,
+      "rep": 0
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702575,
+      "fraction": 0.02,
+      "rep": 1
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702576,
+      "fraction": 0.02,
+      "rep": 2
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702577,
+      "fraction": 0.02,
+      "rep": 3
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702578,
+      "fraction": 0.02,
+      "rep": 4
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702579,
+      "fraction": 0.02,
+      "rep": 5
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702580,
+      "fraction": 0.02,
+      "rep": 6
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702581,
+      "fraction": 0.02,
+      "rep": 7
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702582,
+      "fraction": 0.02,
+      "rep": 8
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702583,
+      "fraction": 0.02,
+      "rep": 9
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702584,
+      "fraction": 0.02,
+      "rep": 10
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702585,
+      "fraction": 0.02,
+      "rep": 11
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702586,
+      "fraction": 0.02,
+      "rep": 12
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702587,
+      "fraction": 0.02,
+      "rep": 13
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702588,
+      "fraction": 0.02,
+      "rep": 14
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702589,
+      "fraction": 0.02,
+      "rep": 15
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702590,
+      "fraction": 0.02,
+      "rep": 16
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702591,
+      "fraction": 0.02,
+      "rep": 17
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702592,
+      "fraction": 0.02,
+      "rep": 18
+    },
+    {
+      "group": "sampling",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702593,
+      "fraction": 0.02,
+      "rep": 19
+    },
+    {
+      "group": "occlusion",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702594
+    },
+    {
+      "group": "occlusion",
+      "profile": "bowl",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702595
+    },
+    {
+      "group": "occlusion",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702596
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702597,
+      "fraction": 0.01,
+      "rep": 0
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702598,
+      "fraction": 0.01,
+      "rep": 1
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702599,
+      "fraction": 0.01,
+      "rep": 2
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702600,
+      "fraction": 0.01,
+      "rep": 3
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702601,
+      "fraction": 0.01,
+      "rep": 4
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702602,
+      "fraction": 0.01,
+      "rep": 5
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702603,
+      "fraction": 0.01,
+      "rep": 6
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702604,
+      "fraction": 0.01,
+      "rep": 7
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702605,
+      "fraction": 0.01,
+      "rep": 8
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702606,
+      "fraction": 0.01,
+      "rep": 9
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702607,
+      "fraction": 0.05,
+      "rep": 0
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702608,
+      "fraction": 0.05,
+      "rep": 1
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702609,
+      "fraction": 0.05,
+      "rep": 2
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702610,
+      "fraction": 0.05,
+      "rep": 3
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702611,
+      "fraction": 0.05,
+      "rep": 4
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702612,
+      "fraction": 0.05,
+      "rep": 5
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702613,
+      "fraction": 0.05,
+      "rep": 6
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702614,
+      "fraction": 0.05,
+      "rep": 7
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702615,
+      "fraction": 0.05,
+      "rep": 8
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702616,
+      "fraction": 0.05,
+      "rep": 9
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702617,
+      "fraction": 0.1,
+      "rep": 0
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702618,
+      "fraction": 0.1,
+      "rep": 1
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702619,
+      "fraction": 0.1,
+      "rep": 2
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702620,
+      "fraction": 0.1,
+      "rep": 3
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702621,
+      "fraction": 0.1,
+      "rep": 4
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702622,
+      "fraction": 0.1,
+      "rep": 5
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702623,
+      "fraction": 0.1,
+      "rep": 6
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702624,
+      "fraction": 0.1,
+      "rep": 7
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702625,
+      "fraction": 0.1,
+      "rep": 8
+    },
+    {
+      "group": "clutter",
+      "profile": "wave",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702626,
+      "fraction": 0.1,
+      "rep": 9
+    },
+    {
+      "group": "slab_clipping",
+      "profile": "narrow",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702627,
+      "half": 20
+    },
+    {
+      "group": "slab_clipping",
+      "profile": "narrow",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702628,
+      "half": 50
+    },
+    {
+      "group": "slab_clipping",
+      "profile": "narrow",
+      "A": 5,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702629,
+      "half": 150
+    },
+    {
+      "group": "roi_change",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702630,
+      "roi_change": "left"
+    },
+    {
+      "group": "roi_change",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702631,
+      "roi_change": "right"
+    },
+    {
+      "group": "roi_change",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702632,
+      "roi_change": "down"
+    },
+    {
+      "group": "roi_change",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702633,
+      "roi_change": "up"
+    },
+    {
+      "group": "roi_change",
+      "profile": "bump",
+      "A": 1.8,
+      "pose": 1,
+      "unit": "m",
+      "seed": 702634,
+      "roi_change": "shrink"
+    }
+  ],
+  "production_sha256": "c3975c22255db7cbd3481a3b25ae5ecd4c9707499631a51d44166cbe15a2c238",
+  "python": "3.12.14",
+  "numpy": "2.5.5"
+}

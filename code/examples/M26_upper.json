@@ -1,0 +1,28 @@
+{
+  "unit": "m",
+  "room_id": "M26",
+  "roi_id": "upper_patch_after_visual_review",
+  "corners": [
+    [
+      -0.5623238640810704,
+      -1.3430660390410483,
+      -12.049395255523969
+    ],
+    [
+      -1.594976195236527,
+      -0.7318139118797584,
+      -12.049395255523969
+    ],
+    [
+      -1.5947265248100166,
+      -0.7313921174409339,
+      -11.349395427128183
+    ],
+    [
+      -0.5620741936545602,
+      -1.3426442446022238,
+      -11.349395427128183
+    ]
+  ],
+  "description": "Separate upper spatial ROI selected after inspecting demo map; no residual filtering; not official GT ROI"
+}

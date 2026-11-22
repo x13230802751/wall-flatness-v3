@@ -1,0 +1,84 @@
+{
+  "groups": {
+    "clean": {
+      "n": 54,
+      "n_success": 54,
+      "n_warning": 0,
+      "bias_mm": 8.840286054613002e-11,
+      "mae_mm": 8.852333002414467e-11,
+      "rmse_mm": 3.745720675674134e-10,
+      "max_ae_mm": 1.5891723154737194e-09,
+      "pass_rate": 1.0,
+      "max_visible_ae_mm": 1.5891723154737194e-09
+    },
+    "noise": {
+      "n": 180,
+      "n_success": 180,
+      "n_warning": 0,
+      "bias_mm": 0.14756086924162287,
+      "mae_mm": 0.147561743645153,
+      "rmse_mm": 0.23769377462978383,
+      "max_ae_mm": 0.6328776048940874,
+      "pass_rate": 0.6777777777777778,
+      "max_visible_ae_mm": 3.040434570777961e-11
+    },
+    "sampling": {
+      "n": 60,
+      "n_success": 60,
+      "n_warning": 30,
+      "bias_mm": -0.027989111007079567,
+      "mae_mm": 0.08048465792930334,
+      "rmse_mm": 0.11545938152273971,
+      "max_ae_mm": 0.3465636626996875,
+      "pass_rate": 0.8666666666666667,
+      "max_visible_ae_mm": 1.0196288258157438e-12
+    },
+    "occlusion": {
+      "n": 3,
+      "n_success": 3,
+      "n_warning": 0,
+      "bias_mm": -0.45244303334908503,
+      "mae_mm": 0.47317782627262966,
+      "rmse_mm": 0.7334882324286452,
+      "max_ae_mm": 1.2639422863663134,
+      "pass_rate": 0.6666666666666666,
+      "max_visible_ae_mm": 2.886579864025407e-15
+    },
+    "clutter": {
+      "n": 30,
+      "n_success": 30,
+      "n_warning": 0,
+      "bias_mm": 4.4966250774165495,
+      "mae_mm": 4.4966250774165495,
+      "rmse_mm": 4.999369960481045,
+      "max_ae_mm": 6.993075986783038,
+      "pass_rate": 0.0,
+      "max_visible_ae_mm": 6.993075986783044
+    },
+    "slab_clipping": {
+      "n": 3,
+      "n_success": 3,
+      "n_warning": 0,
+      "bias_mm": -2.2718236227787725,
+      "mae_mm": 2.271823622778773,
+      "rmse_mm": 2.840111534711991,
+      "max_ae_mm": 4.105366787477985,
+      "pass_rate": 0.3333333333333333,
+      "max_visible_ae_mm": 4.105366787477987
+    },
+    "roi_change": {
+      "n": 5,
+      "n_success": 5,
+      "n_warning": 0,
+      "bias_mm": 0.05656994013008245,
+      "mae_mm": 0.05656994013008245,
+      "rmse_mm": 0.07002947123186624,
+      "max_ae_mm": 0.13881673550209306,
+      "pass_rate": 1.0,
+      "max_visible_ae_mm": 5.5573323720636836e-12
+    }
+  },
+  "clean_numeric_gate_passed": true,
+  "total_cases": 335,
+  "elapsed_seconds": 10.79329869999492
+}
